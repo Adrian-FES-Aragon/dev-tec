@@ -73,6 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+//DB del server
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'ec2-3-216-89-250.compute-1.amazonaws.com',
@@ -94,3 +95,26 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+// //DB del localhost
+// $db['default'] = array(
+// 	'dsn'	=> '',
+// 	'hostname' => '127.0.0.1',
+// 	'username' => 'root',
+// 	'password' => '',
+// 	'database' => 'tec',
+// 	'dbdriver' => 'mysqli',
+// 	'dbprefix' => '',
+// 	'pconnect' => FALSE,
+// 	'db_debug' => (ENVIRONMENT !== 'production'),
+// 	'cache_on' => FALSE,
+// 	'cachedir' => '',
+// 	'char_set' => 'utf8mb4',
+// 	'dbcollat' => 'utf8mb4_spanish_ci',
+// 	'swap_pre' => '',
+// 	'encrypt' => FALSE,
+// 	'compress' => FALSE,
+// 	'stricton' => FALSE,
+// 	'failover' => array(),
+// 	'save_queries' => TRUE
+// );

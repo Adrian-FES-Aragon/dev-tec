@@ -30,7 +30,7 @@ class Migration_create_employee extends CI_Migration
                 'null' => TRUE,
             ),
             'cedula' => array(
-                'type' => 'INT',  
+                'type' => 'VARCHAR',  
                 'constraint' => '100',              
                 'null' => TRUE,
             ),

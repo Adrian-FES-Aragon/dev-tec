@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Migration_create_user extends CI_Migration
@@ -7,6 +6,7 @@ class Migration_create_user extends CI_Migration
 
     public function up()
     {
+        
         $this->dbforge->add_field(array(
             'id' => array(
                 'type' => 'INT',
