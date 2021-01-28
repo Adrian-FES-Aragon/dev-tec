@@ -13,7 +13,7 @@ class Users extends CI_Model{
             'status' => 1,
             'rango' => 2,
         );
-        if(!$this->db->insert('Usuarios', $datos)){
+        if(!$this->db->insert('usuarios', $datos)){
             return false;
         }
         return true;
