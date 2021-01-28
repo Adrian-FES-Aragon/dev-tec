@@ -1,13 +1,13 @@
 (function($) {
     $("#frm_login").submit(function(ev) {
-        $("#alert").html("");
+        console.log($(this).serialize());
         $.ajax({
             url: "login/validate",
             type: "POST",
             data: $(this).serialize(),
             success: function(err) {
                 var json = JSON.parse(err); //para convertir los datos a JSON
-                //console.log(json) //para ver lo que regresa en consola
+                console.log(json); //para ver lo que regresa en consola
                 window.location.replace(json.url);
             },
             statusCode: {
