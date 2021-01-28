@@ -18,13 +18,13 @@ class ModelsUsers extends CI_Model
 
     public function getUsers()
     {
-        $sql = $this->db->order_by('id', 'DESC')->get('Usuarios');
+        $sql = $this->db->order_by('id', 'DESC')->get('usuarios');
         return $sql->result();
     }
 
     public function getPaginate($limit, $offset)
     {
-        $sql = $this->db->order_by('id', 'DESC')->get('Usuarios', $limit, $offset);
+        $sql = $this->db->order_by('id', 'DESC')->get('usuarios', $limit, $offset);
         return $sql->result(); //para devolverlo como un objeto
     }
 
