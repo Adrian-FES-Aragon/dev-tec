@@ -1,20 +1,21 @@
 <!-- HEADER -->
 <header>
-    <nav class="container-fluid navbar navbar-dark bg-dark max-width sticky-md-top">
-        <div class="col col-lg-2" >
-            <a href="<?= base_url(); ?>"><img src="<?= base_url('assets/img/logo1.png') ?>" height="60px" , width="100px"></a>
+    <div class="container-fluid navbar navbar-dark bg-dark">
+        <div class="col-md-auto    ">
+            <a href="<?= base_url(); ?>"><img src="<?= base_url('assets/img/logo1.png') ?>" width="50%"></a>
         </div>
-        <div class="col col-lg-2">
+        <div class="col-md-auto    ">
             <span class="navbar-text navbar-brand">
                 Temas Especiales de Computación
             </span>
         </div>
-        <div class="col col-lg-2">
+        <div class="col-md-auto     ">
             <?php foreach ($menu as $item) : ?>
                 <a class="navbar-text navbar-brand " href="<?= $item['url'] ?>"><?= $item['title'] ?></a>
             <?php endforeach; ?>
         </div>
-    </nav>
+    </div>
 </header>
-<body  style="margin-bottom:4.8%;"  >
+
+<body>
     

@@ -30,7 +30,7 @@ class Registro extends CI_Controller
             'footer'    => $this->load->view('layout/footer', '', TRUE),
         );
 
-        $this->load->view('registro', $data);
+        $this->load->view('home', $data);
     }
 
     public function create()

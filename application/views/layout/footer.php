@@ -5,29 +5,29 @@
 <!-- FOOTER -->
 </body>
 <footer>
-    <div class="container-fluid  max-width navbar navbar-dark bg-dark fixed-bottom ">
-        <div class="col-2 col-lg-1 ">
-            <img src="<?= base_url('assets/img/icon.png') ?>" height="45%" , width="45%">
+    <div class="container-fluid navbar navbar-dark bg-dark ">
+        <div class="col-sm-auto ">
+            <img src="<?= base_url('assets/img/icon.png') ?>" width="35%">
         </div>
-        <div class="col  col-lg-1 ">
+        <div class="col  ">
             <h4 class="text-light  fs-6 ">Getting started </h4>
-            <a href="<?= base_url('users/create'); ?>" class="navbar-text navbar-brand fs-6"> Sign in </a>
+            <a href="<?= base_url('users/create'); ?>" class="navbar-text navbar-brand fs-6"> Registrate </a>
             <br>
-            <a href="<?= base_url('about'); ?>" class="navbar-text navbar-brand fs-6"> About</a>
+            <a href="<?= base_url('about'); ?>" class="navbar-text navbar-brand fs-6"> Más información</a>
         </div>
-        <div class="col  col-lg-2 ">
+        <div class="col ">
             <h4 class="text-light  fs-6 ">About us </h4>
             <a href="https://github.com/Adrian-ICO" class="navbar-text navbar-brand fs-6">GARCÍA CHÁVEZ TOMÁS ADRIAN </a>
             <a href="https://github.com/CristobalMH" class="navbar-text navbar-brand fs-6"> MIRANDA HERNÁNDEZ CRISTÓBAL</a>
         </div>
-        <div class="col  col-lg-1 ">
+        <div class="col ">
             <h4 class="text-light  fs-6 ">Contact us </h4>
             <a href="" class="navbar-text navbar-brand fs-6">00-1800-5500</a>
             <br>
             <a href="" class="navbar-text navbar-brand fs-6">devtec@mail.com</a>
         </div>
-        <div class="col col-lg-1 text-light ">
-            <p>©2021 Copyright</p>
+        <div class="col-sm-auto text-end ">
+            <p class="text-light">©2021 Copyright<a class=" navbar-brand fs-6" href="#">.</a></p>
         </div>
     </div>
 </footer>

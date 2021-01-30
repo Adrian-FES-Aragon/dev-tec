@@ -1,5 +1,5 @@
 <!-- ASIDE -->
-<nav class="col-md-2 d-none d-md-block navbar-light sidebar" style="background-color: #58666D;">
+<nav class="col-md-2 d-none d-md-block bg-dark">
     <style>
         .sidebar-sticky {
             position: -webkit-sticky;
@@ -22,7 +22,7 @@
         }
 
         a:hover {
-            color: black;
+            color: darkturquoise;
         }
     </style>
 
@@ -30,8 +30,8 @@
         <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a href="<?= base_url('users') ?>" class=" nav-link  <?= $this->uri->segment(2) == '' ? 'active' : ''; ?>" data-toggle="pill">Usuarios</a>
             <a href="<?= base_url('users/create') ?>" class=" nav-link  <?= $this->uri->segment(2) == 'create' || $this->uri->segment(2) == 'store' ? 'active' : ''; ?>" data-toggle="pill">Alta empleado</a>
-            <a href="<?= base_url('users/reportes') ?>" class=" nav-link <?= $this->uri->segment(2) == 'reportes' ? 'active' : ''; ?>" data-toggle="pill">Reportes</a>
-            <a href="<?= base_url('users/alta') ?>" class=" nav-link <?= $this->uri->segment(2) == 'alta' ? 'active' : ''; ?>" data-toggle="pill">Levantar reporte</a>
+            <a href="<?= base_url('reports/reportes') ?>" class=" nav-link <?= $this->uri->segment(2) == 'reportes' ? 'active' : ''; ?>" data-toggle="pill">Reportes</a>
+            <a href="<?= base_url('reports/alta') ?>" class=" nav-link <?= $this->uri->segment(2) == 'alta' ? 'active' : ''; ?>" data-toggle="pill">Levantar reporte</a>
         </div>
     </div>
 

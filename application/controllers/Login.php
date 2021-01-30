@@ -15,8 +15,7 @@ class Login extends CI_Controller
 	{
 		$vista = $this->load->view('login', '', TRUE);
 		$this->getTemplate($vista);
-		// $data['menu'] = main_menu();	//pasamos la funcion de main menu a un parametro de $data
-		// $this->load->view('login', $data); //cargamos la vista de login y le pasamos la variable $data
+
 	}
 
 	public function getTemplate($view)
@@ -32,7 +31,7 @@ class Login extends CI_Controller
 			'footer'    => $this->load->view('layout/footer', '', TRUE),
 		);
 
-		$this->load->view('login', $data);
+		$this->load->view('home', $data);
 	}
 
 	public function validate() //construimos la funcion de validacion del usuario

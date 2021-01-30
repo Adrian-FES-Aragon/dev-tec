@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-md-4">
                         <label>Email</label>
-                        <input type="email" name="email" value="<?= set_value('email', isset($user['correo']) ? $user['nombre_usuario'] : '') ?>" class="form-control" placeholder="" readonly>
+                        <input type="email" name="email" value="<?= set_value('email', isset($user['correo']) ? $user['correo'] : '') ?>" class="form-control" placeholder="" readonly>
                     </div>
                     <div class="col-md-4">
                         <label>Status</label>
@@ -66,7 +66,7 @@
         <div class="container  ">
             <div class="row justify-content-md-center">
                 <div class="col-1">
-                    <input type="submit" class="btn btn-primary btn-lg" value="Actualizar">
+                    <input type="submit" class="btn btn-dark btn-lg" value="Actualizar">
                 </div>
             </div>
         </div>

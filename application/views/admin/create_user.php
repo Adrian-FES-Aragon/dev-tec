@@ -80,7 +80,7 @@
     <div class="container  ">
         <div class="row justify-content-md-center">
             <div class="col-1">
-                <input type="submit" class="btn btn-primary" value="Dar de alta">
+                <input type="submit" class="btn  btn-dark" value="Dar de alta">
             </div>
         </div>
     </div>

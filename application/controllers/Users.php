@@ -39,27 +39,18 @@ class Users extends CI_Controller
         $config['num_tag_open'] = '<li class="page-item">';
         $config['num_tag_close'] = '</li>';
 
-        $this->pagination->initialize($config);
-        $page = $this->ModelsUsers->getPaginate($config['per_page'], $offset);
-        $this->getTemplate($this->load->view('admin/show_user', array('data' => $page), true)); // cargamos los registros de la tabla
-
-    }
-
-    public function reportes()
-    {
-        $vista = $this->load->view('admin/all_reports', '', TRUE);
-        $this->getTemplate($vista);
-    }
-
-    public function alta()
-    {
-        $vista = $this->load->view('admin/new_report', '', TRUE);
-        $this->getTemplate($vista);
+        if ($this->session->userdata('is_logged')) {
+            $this->pagination->initialize($config);
+            $page = $this->ModelsUsers->getPaginate($config['per_page'], $offset);
+            $this->getTemplate($this->load->view('admin/show_user', array('data' => $page), true)); // cargamos los registros de la tabla
+        } else {
+            show_404();
+        }
     }
 
     public function create()
     {
-        $vista = $this->load->view('admin/create_user', '', TRUE);  //vista de la tabla de usuarios
+        $vista = $this->load->view('admin/create_user', '', TRUE);  //vista de la tabla de usuarios                        
         $this->getTemplate($vista);
     }
 
@@ -109,7 +100,6 @@ class Users extends CI_Controller
         }
     }
 
-
     public function store()     //llegan los datos y los valida  con form_validation
     {
         $user =     $this->input->post('user'); //$this->input->post('user'); para obtener los datos del formulario
@@ -145,8 +135,8 @@ class Users extends CI_Controller
 
             if (!$this->ModelsUsers->save($user, $user_info)) {
                 $this->output->set_status_header(500);
-            } else {        //si no hubo errores redirecciona y envia el email
-                $this->sendEmail($user);
+            } else {        
+                $this->sendEmail($user); //si no hubo errores redirecciona y envia el email
                 $this->session->set_flashdata('msg', 'Usuario registrado exitosamente');
                 redirect(base_url('users'));
             }
@@ -169,7 +159,6 @@ class Users extends CI_Controller
                 ->set_status_header(200);
         }
     }
-
 
     public function edit($id = 0)
     {
