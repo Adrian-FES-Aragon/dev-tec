@@ -94,7 +94,7 @@ class Reports extends CI_Controller
         $proc = $this->input->post('proc');
 
         $this->form_validation->set_rules(getCreateReportRules());
-        var_dump(form_validation);
+        
         if ($this->form_validation->run() == FALSE) {
             $this->output->set_status_header(400);
         } else {
